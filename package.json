@@ -1,0 +1,10 @@
+{
+  "name": "supportsages",
+  "version": "1.0.0",
+  "description": "Interview Task",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Adithyan",
+  "license": "MIT"
+}
