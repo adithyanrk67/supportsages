@@ -16,7 +16,7 @@
     - name: confirm the deletion of nodeapp services
       pause:
        prompt: 'Waiting to complete the nodeapp services deletion'
-       seconds: 5
+       seconds: 15
 
     - name: Deploy
       command: docker stack deploy  -c /home/docker-compose.yml nodeapp
