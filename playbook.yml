@@ -1,0 +1,24 @@
+---
+- name: Deploy
+  hosts: target
+  become: true
+
+  tasks:
+    - name: Copy compose file to target
+      copy:
+       src: /home/supportsages/docker-compose.yml
+       dest: /home/
+
+    - name: Removing stack from swarm
+      command: docker stack rm nodeapp
+      ignore_errors: True
+       
+    - name: confirm the deletion of nodeapp services
+      pause:
+       prompt: 'Waiting to complete the nodeapp services deletion'
+       seconds: 5
+
+    - name: Deploy
+      command: docker stack deploy  -c /home/docker-compose.yml nodeapp
+
+

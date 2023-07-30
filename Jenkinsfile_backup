@@ -35,14 +35,6 @@ pipeline {
                 }
             }
         }
-        stage('Deploy via Ansible') {
-            steps {
-                ansiblePlaybook credentialsId: 'controll',
-                installation: 'ansible',
-                inventory: '/home/supportsages/inventory.txt',
-                playbook: '/home/supportsages/playbook.yml'
-            }
-        }
     }
 }
 
