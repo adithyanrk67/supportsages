@@ -6,7 +6,7 @@ app.use(express.json());
 // Sample data - replace this with your actual data or connect to a database
 let users = [
  { id: 1, name: 'John Doei', age: 10 },
- { id: 2, name: 'Jane Smithi', age: 19 },
+ { id: 2, name: 'Jane Smithi', age: 10 },
 ];
 // Route to get all users
 app.get('/users', (req, res) => {
